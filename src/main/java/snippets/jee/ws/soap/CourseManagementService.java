@@ -6,7 +6,7 @@ import java.util.List;
 import javax.jws.WebService;
 
 @WebService
-public class CoursseManagementService {
+public class CourseManagementService {
 
     public List<Course> getCourses() {
         //Here courses could be fetched from database using, 
