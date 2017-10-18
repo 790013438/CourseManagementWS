@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
-    <endpoint name="CourseService" implementation="snippets.jee.ws.soap.CourseManagementService" url-pattern="/courseService">
-    </endpoint>
+<endpoints 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/jax-ws/ri/runtime http://java.sun.com/webservices/docs/2.0/jaxws/sun-jaxws.xsd"
+    xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+    <endpoint name="CourseService" implementation="snippets.jee.ws.soap.CourseManagementService" url-pattern="/courseService"/>
 </endpoints>
-
