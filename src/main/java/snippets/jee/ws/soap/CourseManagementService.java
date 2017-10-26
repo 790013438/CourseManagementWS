@@ -5,8 +5,8 @@ import java.util.List;
 
 import javax.jws.WebService;
 
-@WebService
-public class CourseManagementService {
+@WebService(endpointInterface="snippets.jee.ws.soap.ICourseManagementService")
+public class CourseManagementService implements ICourseManagementService {
 
     public List<Course> getCourses() {
         //Here courses could be fetched from database using, 
