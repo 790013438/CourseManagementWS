@@ -3,6 +3,7 @@ package snippets.jee.ws.soap;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 @WebService
@@ -12,7 +13,7 @@ public class CourseManagementService {
         //Here courses could be fetched from database using, 
         //for example, JDBC or JDO. However, to keep this example 
         //simple, we will return hard coded list of courses
-        
+
         List<Course> courses = new ArrayList<Course>();
 
         courses.add(new Course(1, "Course-1", 4));
@@ -21,7 +22,7 @@ public class CourseManagementService {
         return courses;
     }
 
-    public Course getCourse (int courseId) {
+    public Course getCourse (@WebParam(name="courseId") int courseId) {
         //Here again, we could get course details from database using
         //JDBC or JDO. However, to keep this example 
         //simple, we will return hard coded course.
