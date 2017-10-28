@@ -5,11 +5,15 @@ import java.util.List;
 
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+import javax.jws.soap.SOAPBinding.Use;
 
 @WebService
+@SOAPBinding(style=Style.RPC, use=Use.LITERAL)
 public class CourseManagementService {
 
-    public List<Course> getCourses() {
+    public Courses getCourses() {
         //Here courses could be fetched from database using, 
         //for example, JDBC or JDO. However, to keep this example 
         //simple, we will return hard coded list of courses
@@ -19,7 +23,7 @@ public class CourseManagementService {
         courses.add(new Course(1, "Course-1", 4));
         courses.add(new Course(2, "Course-2", 3));
 
-        return courses;
+        return new Courses(courses);
     }
 
     public Course getCourse (@WebParam(name="courseId") int courseId) {
